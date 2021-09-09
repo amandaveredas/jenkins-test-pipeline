@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-                    docker build -f Dockerfile.jenkins -t jenkins-node-sample:latest .
+                    docker build -t jenkins-node-sample:latest .
                     docker tag jenkins-node-sample amandaveredas/jenkins-node-sample:latest
                     docker tag jenkins-node-sample amandaveredas/jenkins-node-sample:$BUILD_NUMBER
                 """
