@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools { nodejs 'node' }
     environment {
-        DOCKERHUB_CRED = credentials('dockerhub-token')
+        DOCKERHUB_CRED = credentials('dockerhub')
     }
     stages{ 
         stage('Build') {
